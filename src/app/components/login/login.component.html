@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-xl-4 col-md-6 col-sm-8 col-lg-4">
+            <h2>Ingresar</h2>
+            <form class="example-form" (ngSubmit)="onSubmit()">
+
+                <mat-form-field class="example-full-width">
+                    <input matInput id="name" name="name" placeholder="Name" [(ngModel)]="user.name">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput id="password" name="password" placeholder="Password" [(ngModel)]="user.pws" type="password">
+                </mat-form-field>
+
+                <button mat-raised-button class="btn-block" color="primary"> Ingresar </button><br>
+                <button mat-raised-button class="btn-block" color="primary" routerLink="/register">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>

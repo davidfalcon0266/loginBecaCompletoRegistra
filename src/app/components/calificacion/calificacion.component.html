@@ -1,0 +1,56 @@
+<!-- <p>calificacion works!</p>
+<p>{{message}}</p>
+<button (click)="sendMessage()">Enviar mensaje</button> -->
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container *ngIf="mandar == alumno.id" matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id </th>
+        <td mat-cell *matCellDef="let alumno">
+            <h6>{{alumno.id}}</h6>
+        </td>
+    </ng-container>
+
+    <ng-container *ngIf="mandar == alumno.id" matColumnDef="materia1">
+        <th mat-header-cell *matHeaderCellDef> materia1 </th>
+        <td mat-cell *matCellDef="let alumno">
+            <h6>{{alumno.materia}}</h6>
+        </td>
+    </ng-container>
+
+    <ng-container *ngIf="mandar == alumno.id" matColumnDef="materia2">
+        <th mat-header-cell *matHeaderCellDef> materia2 </th>
+        <td mat-cell *matCellDef="let alumno">
+            <h6>{{alumno.nota}}</h6>
+        </td>
+    </ng-container> -->
+
+<!-- <ng-container matColumnDef="info">
+        <th mat-header-cell *matHeaderCellDef> Info </th>
+        <td mat-cell *matCellDef="let alumno">
+            <button (click)="mandarId(alumno.id)" type="button" mat-button>Ver Notas</button>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>  -->
+
+
+
+<table class="mt-5" *ngIf="mandar" class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Alumno</th>
+            <th scope="col">Materia</th>
+            <th scope="col">Nota</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataSource">
+            <th *ngIf="mandar == data.id">{{data.nombre}}</th>
+            <td *ngIf="mandar == data.id">{{data.materia}}</td>
+            <td *ngIf="mandar == data.id">{{data.nota}}</td>
+
+        </tr>
+    </tbody>
+</table>
